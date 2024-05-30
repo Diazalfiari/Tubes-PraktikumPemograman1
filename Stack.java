@@ -2,16 +2,20 @@
 public class Stack {
 	private Node top;
 
+
+    // Konstruktor untuk membuat objek Stack kosong
     public Stack() {
         this.top = null;
     }
 
+    // Menambahkan elemen ke atas tumpukan (push)
     public void push(String title, String author, int year) {
         Node newNode = new Node(title, author, year);
         newNode.setNext(top);
         top = newNode;
     }
 
+    // Menghapus elemen dari atas tumpukan (pop)
     public Node pop() {
         if (isEmpty()) {
             System.out.println("Stack is empty");
@@ -22,6 +26,7 @@ public class Stack {
         return poppedNode;
     }
 
+    // Melihat elemen teratas tanpa menghapusnya (peek)
     public Node peek() {
         if (isEmpty()) {
             System.out.println("Stack is empty");
@@ -30,10 +35,12 @@ public class Stack {
         return top;
     }
 
+    // Memeriksa apakah tumpukan kosong
     public boolean isEmpty() {
         return top == null;
     }
 
+    // Menghitung jumlah elemen dalam tumpukan
     public int size() {
         int size = 0;
         Node current = top;
@@ -44,6 +51,7 @@ public class Stack {
         return size;
     }
 
+    // Menampilkan seluruh isi tumpukan
     public void display() {
         if (isEmpty()) {
             System.out.println("Stack kosong");
