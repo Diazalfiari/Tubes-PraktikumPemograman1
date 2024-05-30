@@ -16,12 +16,12 @@ public class Node {
         this.next = null;
     }
 
-    // Getter untuk mengambil node selanjutnya
+    // Getter untuk mengembalikan node selanjutnya
     public Node getNext() {
         return next;
     }
 
-    // setter untuk mengembalikan node selanjutnya
+    // setter untuk mengatur node selanjutnya
     public void setNext(Node next) {
         this.next = next;
     }
