@@ -18,26 +18,27 @@ public class Main {
         panel.setLayout(new GridLayout(5, 2));
 
         // Membuat label dan field untuk input judul, penulis, dan tahun
-        JLabel titleLabel = new JLabel("Judul Buku:");
-        JTextField titleField = new JTextField();
-        JLabel authorLabel = new JLabel("Penulis:");
-        JTextField authorField = new JTextField();
-        JLabel yearLabel = new JLabel("Tahun Rilis:");
-        JTextField yearField = new JTextField();
+        JLabel judulLabel = new JLabel("Judul Buku:");
+        JTextField judulField = new JTextField();
+        JLabel penulisLabel = new JLabel("Penulis:");
+        JTextField penulisField = new JTextField();
+        JLabel tahunLabel = new JLabel("Tahun Rilis:");
+        JTextField tahunField = new JTextField();
 
         // Membuat tombol untuk tambah, hapus, dan tampilkan buku
         JButton tambahButton = new JButton("Tambah Buku");
         JButton hapusButton = new JButton("Hapus Buku");
         JButton tampilButton = new JButton("Tampilkan Semua Buku");
+        JButton sizeButton = new JButton("Jumlah Buku");
 
         // Menambahkan action listener untuk tombol tambah
         tambahButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String title = titleField.getText();
-                String author = authorField.getText();
-                int year = Integer.parseInt(yearField.getText());
-                stackBuku.push(title, author, year);
+                String judul = judulField.getText();
+                String penulis = penulisField.getText();
+                int tahun = Integer.parseInt(tahunField.getText());
+                stackBuku.push(judul, penulis, tahun);
                 JOptionPane.showMessageDialog(frame, "Buku berhasil ditambahkan");
             }
         });
@@ -73,16 +74,27 @@ public class Main {
             }
         });
 
+        // Menambahkan action listener untuk tombol size
+        sizeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int size = stackBuku.size(); 
+                JOptionPane.showMessageDialog(frame, "Jumlah Buku : " +size);
+            }
+        }
+        );
+
         // Menambahkan komponen ke dalam panel
-        panel.add(titleLabel);
-        panel.add(titleField);
-        panel.add(authorLabel);
-        panel.add(authorField);
-        panel.add(yearLabel);
-        panel.add(yearField);
+        panel.add(judulLabel);
+        panel.add(judulField);
+        panel.add(penulisLabel);
+        panel.add(penulisField);
+        panel.add(tahunLabel);
+        panel.add(tahunField);
         panel.add(tambahButton);
         panel.add(hapusButton);
         panel.add(tampilButton);
+        panel.add(sizeButton);
 
         // Menambahkan panel ke dalam frame dan menampilkannya
         frame.add(panel);

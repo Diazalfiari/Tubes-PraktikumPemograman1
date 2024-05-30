@@ -9,8 +9,8 @@ public class Stack {
     }
 
     // Menambahkan elemen ke atas tumpukan (push)
-    public void push(String title, String author, int year) {
-        Node newNode = new Node(title, author, year);
+    public void push(String judul, String penulis, int tahun) {
+        Node newNode = new Node(judul, penulis, tahun);
         newNode.setNext(top);
         top = newNode;
     }

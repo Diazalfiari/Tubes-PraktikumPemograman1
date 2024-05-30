@@ -2,17 +2,17 @@
 public class Node {
 	
     //deklarasikan variabel
-    String title;
-    String author;
-    int year;
+    String judul;
+    String penulis;
+    int tahun;
     Node next;
 
 
     // Konstruktor untuk membuat objek Node dengan judul, penulis, dan tahun
-    public Node(String title, String author, int year) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
+    public Node(String judul, String penulis, int tahun) {
+        this.judul = judul;
+        this.penulis = penulis;
+        this.tahun = tahun;
         this.next = null;
     }
 
@@ -21,13 +21,13 @@ public class Node {
         return next;
     }
 
-    
+    // setter untuk mengembalikan node selanjutnya
     public void setNext(Node next) {
         this.next = next;
     }
 
     // Representasi teks dari objek Node
     public String toString() {
-        return "Title: " + title + "\nAuthor: " + author + "\nYear: " + year;
+        return "judul: " + judul + "\npenulis: " + penulis + "\ntahun: " + tahun;
     }
 }
