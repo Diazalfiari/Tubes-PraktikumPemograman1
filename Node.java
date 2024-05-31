@@ -1,7 +1,7 @@
 
 public class Node {
 	
-    //deklarasikan variabel
+    //deklarasikan variabel... untuk ,menyimpan...
     String judul;
     String penulis;
     int tahun;
@@ -15,6 +15,36 @@ public class Node {
         this.tahun = tahun;
         this.next = null;
     }
+
+    // Getter untuk mengembalikan judul buku
+    public String getJudul() {
+		return judul;
+	}
+
+    // Setter untuk mengatur judul buku
+	public void setJudul(String judul) {
+		this.judul = judul;
+	}
+
+    // Getter untuk mengembalikan penulis buku
+	public String getPenulis() {
+		return penulis;
+	}
+
+    // Setter untuk mengatur penulis buku
+	public void setPenulis(String penulis) {
+		this.penulis = penulis;
+	}
+
+    // Getter untuk mengembalikan tahun terbit buku
+	public int getTahun() {
+		return tahun;
+	}
+
+    // Setter untuk mengatur tahun terbit buku
+	public void setTahun(int tahun) {
+		this.tahun = tahun;
+	}
 
     // Getter untuk mengembalikan node selanjutnya
     public Node getNext() {
