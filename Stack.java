@@ -50,17 +50,4 @@ public class Stack {
         }
         return size;
     }
-
-    // Menampilkan seluruh isi tumpukan
-    public void display() {
-        if (isEmpty()) {
-            System.out.println("Stack kosong");
-            return;
-        }
-        Node current = top;
-        while (current != null) {
-            System.out.println(current);
-            current = current.getNext();
-        }
-    }
 }
