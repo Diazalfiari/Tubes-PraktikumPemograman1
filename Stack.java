@@ -1,4 +1,3 @@
-
 public class Stack {
 	private Node top;
 
@@ -17,10 +16,6 @@ public class Stack {
 
     // Menghapus elemen dari atas tumpukan (pop)
     public Node pop() {
-        if (isEmpty()) {
-            System.out.println("Stack is empty");
-            return null;
-        }
         Node poppedNode = top;
         top = top.getNext();
         return poppedNode;
@@ -28,10 +23,6 @@ public class Stack {
 
     // Melihat elemen teratas tanpa menghapusnya (peek)
     public Node peek() {
-        if (isEmpty()) {
-            System.out.println("Stack is empty");
-            return null;
-        }
         return top;
     }
 
